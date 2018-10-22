@@ -1,0 +1,85 @@
+<%= simple_form_for(client) do |f| %>
+  <% if client.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(client.errors.count, "error") %> prohibited this client from being saved:</h2>
+
+      <ul>
+      <% client.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name, "Nome" %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="">
+    <%= f.label :birthday, "Data de Nacimento" %>
+    <%= f.date_field :birthday, class: "input-field datepicker" , style: "width:200px" %> 
+  </div>
+
+  <div class="field">
+    <%= f.label :addres, "Endereço" %>
+    <%= f.text_field :address %>
+  </div>
+
+  <div class="field">
+    <%= f.label :father, "Pai" %>
+    <%= f.text_field :father %>
+  </div>
+
+  <div class="field" >
+    <%= f.label :mother, "Mãe" %>
+    <%= f.text_field :mother %>
+  </div>
+
+  <div class="field" >
+    <%= f.label :tel, "Telefone" %>
+    <%= f.number_field :tel %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email,"E-mail" %>
+    <%= f.text_field :email %>
+  </div>
+
+<h1>Vacinas</h1> <br><br>
+  <div class="add_v">
+    <%= f.simple_fields_for :vaccines do |builder|%>
+      <%= render 'vaccine_fields', f: builder %>
+
+      <% end %>
+  </div>
+  <br>
+  <div>
+     <%= link_to_add_association 'Adicionar Vacinas', f, :vaccines, class: "waves-effect waves-light btn  red accent-4 " , data: { association_insertion_node: '.add_v', association_insertion_method: :append } %>
+   </div>
+  <div class="actions">
+    <br>
+    <%= f.submit "Salvar cadastro" , class: "waves-effect waves-light btn  red accent-4 " %> <br> <br>
+  </div>
+<% end %>
+<script type="text/javascript">
+      $(document).ready(function() {
+          $('select').material_select();
+      });
+  </script>
+
+   <script type="text/javascript">
+$('#datetimepicker2').datetimepicker({
+  datepicker:false,
+  format:'H:i'
+});
+
+    </script>
+
+       <script type="text/javascript">
+$('#datetimepicker3').datetimepicker({
+  datepicker:false,
+  format:'H:i'
+});
+
+    </script>

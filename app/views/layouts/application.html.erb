@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Clinvasmt</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!--<script type="text/javascript" src="/materialize/vendors/jquery-3.2.1.min.js"></script>-->
+<!-- sweetalert-->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.18.0/sweetalert2.all.js"></script>
+<script src="/js/jquery-ui-1.12.1/jquery-ui.js"></script>
+<!--materialize js-->
+<script type="text/javascript" src="/materialize/js/materialize.js"></script>
+<!--prism-->
+<script type="text/javascript" src="/materialize/vendors/prism/prism.js"></script>
+<!--scrollbar-->
+<script type="text/javascript" src="/materialize/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+<!-- chartjs -->
+<script type="text/javascript" src="/materialize/vendors/chartjs/chart.min.js"></script>
+<!--plugins.js - Some Specific JS codes for Plugin Settings-->
+<script type="text/javascript" src="/materialize/js/plugins.js"></script>
+<!--custom-script.js - Add your own theme custom JS-->
+<script type="text/javascript" src="/materialize/js/custom-script.js"></script>
+<!--<script type="text/javascript" src="/materialize/js/scripts/dashboard-ecommerce.js"></script>-->
+
+
+<!--SCRIPTS-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.5/chosen.jquery.min.js" type="text/javascript" ></script>
+<script src="/js/datetimepicker/build/jquery.datetimepicker.full.min.js"></script>
+<script src="/js/util.js" type="text/javascript" ></script>
+
+ 
+
+  </head>
+
+   <body>
+     <div class="container">
+      <div class="card">
+      <div class="card-content">
+        <div class="row">
+           <%= render 'layouts/menu' %> 
+          <div class="">
+            <%= yield %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

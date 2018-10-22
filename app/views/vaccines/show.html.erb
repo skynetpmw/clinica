@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @vaccine.name %>
+</p>
+
+<p>
+  <strong>Desc:</strong>
+  <%= @vaccine.desc %>
+</p>
+
+<p>
+  <strong>Lote:</strong>
+  <%= @vaccine.lote %>
+</p>
+
+<p>
+  <strong>Expiration:</strong>
+  <%= @vaccine.expiration %>
+</p>
+
+<p>
+  <strong>Provider:</strong>
+  <%= @vaccine.provider %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @vaccine.quantity %>
+</p>
+
+<p>
+  <strong>Client:</strong>
+  <%= @vaccine.client %>
+</p>
+
+<%= link_to 'Edit', edit_vaccine_path(@vaccine) %> |
+<%= link_to 'Back', vaccines_path %>

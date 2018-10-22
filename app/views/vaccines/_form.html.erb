@@ -1,0 +1,52 @@
+<%= form_for(vaccine) do |f| %>
+  <% if vaccine.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(vaccine.errors.count, "error") %> prohibited this vaccine from being saved:</h2>
+
+      <ul>
+      <% vaccine.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name,"Nome" %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :desc, "Descrição" %>
+    <%= f.text_field :desc %>
+  </div>
+
+  <div class="field">
+    <%= f.label :lote %>
+    <%= f.text_field :lote %>
+  </div>
+
+  <div class="field">
+    <%= f.label :expiration , "Data de Validade"%>
+    <%= f.date_select :expiration %>
+  </div>
+
+  <div class="field">
+    <%= f.label :provider,"Fornecedor" %>
+    <%= f.text_field :provider %>
+  </div>
+
+  <div class="field">
+    <%= f.label :quantity,"Quantidade" %>
+    <%= f.number_field :quantity %>
+  </div>
+
+  <div class="field">
+    <%= f.label :client_id %>
+    <%= f.text_field :client_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

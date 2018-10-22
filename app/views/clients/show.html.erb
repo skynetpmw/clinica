@@ -1,0 +1,74 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @client.name %>
+</p>
+
+<p>
+  <strong>Birthday:</strong>
+  <%= @client.birthday %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @client.address %>
+</p>
+
+<p>
+  <strong>Father:</strong>
+  <%= @client.father %>
+</p>
+
+<p>
+  <strong>Mother:</strong>
+  <%= @client.mother %>
+</p>
+
+<p>
+  <strong>Tel:</strong>
+  <%= @client.tel %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @client.email %>
+</p>
+
+   <strong>Vacinas:</strong>
+  <% @client.vaccines.each do |vaccine| %>
+
+<p>
+  <strong>Name:</strong>
+  <%= vaccine.name %>
+</p>
+
+<p>
+  <strong>Desc:</strong>
+  <%= vaccine.desc %>
+</p>
+
+<p>
+  <strong>Lote:</strong>
+  <%= vaccine.lote %>
+</p>
+
+<p>
+  <strong>Expiration:</strong>
+  <%= vaccine.expiration %>
+</p>
+
+<p>
+  <strong>Provider:</strong>
+  <%= vaccine.provider %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= vaccine.quantity %>
+</p>
+
+<% end %>
+
+<%= link_to 'Edit', edit_client_path(@client) %> |
+<%= link_to 'Back', clients_path %>

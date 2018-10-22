@@ -1,0 +1,92 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Pacientes</h1>
+
+
+
+
+<ul class="collapsible ">
+    <% @clients.each do |client| %>
+    <li>
+    
+        
+      <div class="collapsible-header"><i class="material-icons">account_box</i><%= client.name %> 
+         
+         <div style="position: absolute;
+  right:10%;
+  color: red;">
+          <span  class= "card" style="padding: 7px;" ><%= link_to 'Detalhar', client %></span>
+        <span class= "card"  style="padding: 7px;" ><%= link_to 'Editar', edit_client_path(client) %></span>
+        <span  class= "card" style="padding: 7px;"><%= link_to 'Deletar', client, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+      </div>
+      </div>
+          
+      <div class="collapsible-body " >
+<div class="divider blue"></div>
+        <span ><%= client.birthday %></span> <br>
+        <div class="divider blue"></div>
+        <span > <%= client.address %></span> <br>
+        <div class="divider blue"></div>
+         <span ><%= client.father %></span> <br>
+         <div class="divider  blue"></div>
+         <span > <%= client.mother %></span><br>
+         <div class="divider blue"></div>
+         <span ><%= client.tel %></span><br>
+         <div class="divider blue"></div>
+         <span ><%= client.email %></span> <br>  
+         <div class="divider blue"></div>
+         <ul class="collapsible">
+         <% client.vaccines.each do |vaccine| %>
+          <li> 
+             <div class="collapsible-header"><i class="material-icons">colorize</i> <%= vaccine.name %></div>
+               
+            <div class="collapsible-body"> 
+              <span class= "zed" >  <%= vaccine.desc %></span> <br>
+              <div class="divider blue"></div>
+               <span class= "zed" ><%= vaccine.lote %></span><br> 
+               <div class="divider blue"></div>
+                 <% end %> 
+             </div> 
+           </li> 
+         
+         </ul>
+
+          </div>
+
+    </li>
+
+     
+       <% end %>
+
+  </ul>
+  
+     <script type="text/javascript">
+    
+      document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.collapsible');
+    var instances = M.Collapsible.init(elems, options);
+  });
+
+  // Or with jQuery
+
+  $(document).ready(function(){
+    $('.collapsible').collapsible();
+  });
+        
+  </script>
+
+<br>
+<%= will_paginate @clients%>
+<%= link_to 'Novo Cliente', new_client_path %>
+
+<% content_for :head do %>
+
+<style type="text/css">
+.righty{
+  border-color: black;
+  position: absolute;
+  right:15%;
+  color: red;
+}
+</style>
+<% end %>
