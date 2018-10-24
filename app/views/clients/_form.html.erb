@@ -12,38 +12,38 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name, "Nome" %>
-    <%= f.text_field :name %>
+    <%= f.label :name, "Nome", class:"flow-text" , style:"font-weight: bold;"%>
+    <%= f.text_field :name , class:"flow-text" , style:"font-weight: bold;"%>
   </div>
 
   <div class="">
-    <%= f.label :birthday, "Data de Nacimento" %>
-    <%= f.date_field :birthday, class: "input-field datepicker" , style: "width:200px" %> 
+    <%= f.label :birthday, "Data de Nacimento", class:"flow-text" , style:"font-weight: bold;" %>
+    <%= f.date_field :birthday, class: "input-field datepicker flow-text" , style: "width:200px" %> 
   </div>
 
   <div class="field">
-    <%= f.label :addres, "Endereço" %>
-    <%= f.text_field :address %>
+    <%= f.label :addres, "Endereço", class:"flow-text" , style:"font-weight: bold;" %>
+    <%= f.text_field :address, class:"flow-text" , style:"font-weight: bold;"%>
   </div>
 
   <div class="field">
-    <%= f.label :father, "Pai" %>
-    <%= f.text_field :father %>
+    <%= f.label :father, "Pai", class:"flow-text" , style:"font-weight: bold;" %>
+    <%= f.text_field :father, class:"flow-text" , style:"font-weight: bold;" %>
+  </div>
+
+  <div class="field"  >
+    <%= f.label :mother, "Mãe", class:"flow-text" , style:"font-weight: bold;" %>
+    <%= f.text_field :mother, class:"flow-text" , style:"font-weight: bold;" %>
   </div>
 
   <div class="field" >
-    <%= f.label :mother, "Mãe" %>
-    <%= f.text_field :mother %>
-  </div>
-
-  <div class="field" >
-    <%= f.label :tel, "Telefone" %>
-    <%= f.number_field :tel %>
+    <%= f.label :tel, "Telefone", class:"flow-text" , style:"font-weight: bold;" %>
+    <%= f.number_field :tel, class:"flow-text" , style:"font-weight: bold;" %>
   </div>
 
   <div class="field">
-    <%= f.label :email,"E-mail" %>
-    <%= f.text_field :email %>
+    <%= f.label :email,"E-mail", class:"flow-text" , style:"font-weight: bold;" %>
+    <%= f.text_field :email, class:"flow-text" , style:"font-weight: bold;" %>
   </div>
 
 <h1>Vacinas</h1> <br><br>

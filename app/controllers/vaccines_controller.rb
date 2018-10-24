@@ -5,6 +5,7 @@ class VaccinesController < ApplicationController
   # GET /vaccines.json
   def index
     @vaccines = Vaccine.paginate(:page => params[:page], :per_page => 10).order('return asc')
+    vacc = Vaccine.all    
   end
 
   # GET /vaccines/1
@@ -65,10 +66,11 @@ class VaccinesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_vaccine
       @vaccine = Vaccine.find(params[:id])
+      
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def vaccine_params
-      params.require(:vaccine).permit(:name, :desc, :lote, :expiration, :provider, :quantity, :client_id)
+      params.require(:vaccine).permit(:name, :desc, :lote, :expiration, :provider, :quantity, :client_id, :timereturn, :return)
     end
 end

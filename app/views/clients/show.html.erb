@@ -1,69 +1,69 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<p style="font-size: 1.5rem;">
   <strong>Name:</strong>
   <%= @client.name %>
 </p>
 
-<p>
+<p style="font-size: 1.5rem;" >
   <strong>Birthday:</strong>
   <%= @client.birthday %>
 </p>
 
-<p>
+<p style="font-size: 1.5rem;" >
   <strong>Address:</strong>
   <%= @client.address %>
 </p>
 
-<p>
+<p style="font-size: 1.5rem;" >
   <strong>Father:</strong>
   <%= @client.father %>
 </p>
 
-<p>
+<p style="font-size: 1.5rem;" >
   <strong>Mother:</strong>
   <%= @client.mother %>
 </p>
 
-<p>
+<p style="font-size: 1.5rem;" >
   <strong>Tel:</strong>
   <%= @client.tel %>
 </p>
 
-<p>
+<p style="font-size: 1.5rem;" >
   <strong>Email:</strong>
   <%= @client.email %>
 </p>
 
-   <strong>Vacinas:</strong>
+   <strong style="font-size: 1.5rem; color: blue">Vacinas:</strong>
   <% @client.vaccines.each do |vaccine| %>
 
-<p>
+<p style="font-size: 1.5rem;" >
   <strong>Name:</strong>
   <%= vaccine.name %>
 </p>
 
-<p>
+<p style="font-size: 1.5rem;" >
   <strong>Desc:</strong>
   <%= vaccine.desc %>
 </p>
 
-<p>
+<p style="font-size: 1.5rem;" >
   <strong>Lote:</strong>
   <%= vaccine.lote %>
 </p>
 
-<p>
+<p style="font-size: 1.5rem;" >
   <strong>Expiration:</strong>
   <%= vaccine.expiration %>
 </p>
 
-<p>
+<p style="font-size: 1.5rem;" >
   <strong>Provider:</strong>
   <%= vaccine.provider %>
 </p>
 
-<p>
+<p style="font-size: 1.5rem;" >
   <strong>Quantity:</strong>
   <%= vaccine.quantity %>
 </p>
@@ -72,3 +72,4 @@
 
 <%= link_to 'Edit', edit_client_path(@client) %> |
 <%= link_to 'Back', clients_path %>
+

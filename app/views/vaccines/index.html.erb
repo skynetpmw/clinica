@@ -23,7 +23,7 @@
     <% @vaccines.each do |vaccine| %>
       <tr>
         <td><%= vaccine.client.name %></td>
-        <td><%= vaccine.return + 60%></td>
+        <td><%= vaccine.return + vaccine.timereturn %></td>
         <td><%= vaccine.name %></td>
         <td><%= vaccine.desc %></td>
         <td><%= vaccine.lote %></td>

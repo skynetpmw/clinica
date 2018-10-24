@@ -10,7 +10,7 @@
     <li>
     
         
-      <div class="collapsible-header"><i class="material-icons">account_box</i><%= client.name %> 
+      <div class="collapsible-header " style="font-size: 1.5rem;" ><i class="material-icons">account_box</i><%= client.name %> 
          
          <div style="position: absolute;
   right:10%;
@@ -21,7 +21,7 @@
       </div>
       </div>
           
-      <div class="collapsible-body " >
+      <div class="collapsible-body " style="font-size: 1.5rem;" >
 <div class="divider blue"></div>
         <span ><%= client.birthday %></span> <br>
         <div class="divider blue"></div>
@@ -77,7 +77,7 @@
 
 <br>
 <%= will_paginate @clients%>
-<%= link_to 'Novo Cliente', new_client_path %>
+<%= link_to 'Novo Cliente', new_client_path , class:"flow-text" %>
 
 <% content_for :head do %>
 

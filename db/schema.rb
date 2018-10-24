@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180718143508) do
+ActiveRecord::Schema.define(version: 20181024160206) do
 
   create_table "clients", force: :cascade do |t|
     t.string   "name"
@@ -18,10 +18,10 @@ ActiveRecord::Schema.define(version: 20180718143508) do
     t.string   "address"
     t.string   "father"
     t.string   "mother"
-    t.integer  "tel"
+    t.integer  "tel",        limit: 8
     t.string   "email"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
   end
 
   create_table "vaccines", force: :cascade do |t|
@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 20180718143508) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.date     "return"
+    t.integer  "timereturn"
     t.index ["client_id"], name: "index_vaccines_on_client_id"
   end
 
