@@ -7,11 +7,11 @@
     <tr>
       <th>Paciente</th>
       <th>Retorno</th>
-      <th>Name</th>
-      <th>Desc</th>
+      <th>Nome</th>
+     <!--  <th>Desc</th>-->
       <th>Lote</th>
-      <th>Expiration</th>
-      <th>Provider</th>
+      <th>Validade</th>
+     <!--  <th>Provider</th>-->
       <th>Telefone</th>
       
       
@@ -23,12 +23,13 @@
     <% @vaccines.each do |vaccine| %>
       <tr>
         <td><%= vaccine.client.name %></td>
-        <td><%= vaccine.return + vaccine.timereturn %></td>
+       <!--  talvez votar a usar <td><%#= vaccine.return + vaccine.timereturn %></td> -->
+        <td><%= vaccine.dater %></td>
         <td><%= vaccine.name %></td>
-        <td><%= vaccine.desc %></td>
+      <!--   <td><%#= vaccine.desc %></td> -->
         <td><%= vaccine.lote %></td>
         <td><%= vaccine.expiration %></td>
-        <td><%= vaccine.provider %></td>
+      <!--   <td><%= vaccine.provider %></td>-->
         <td><%= vaccine.client.tel%></td>
         
         

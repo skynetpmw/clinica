@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181024160206) do
+ActiveRecord::Schema.define(version: 20190227143027) do
 
   create_table "clients", force: :cascade do |t|
     t.string   "name"
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 20181024160206) do
     t.datetime "updated_at", null: false
     t.date     "return"
     t.integer  "timereturn"
+    t.date     "dater"
     t.index ["client_id"], name: "index_vaccines_on_client_id"
   end
 

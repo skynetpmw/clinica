@@ -6,7 +6,7 @@
 </p>
 
 <p style="font-size: 1.5rem;" >
-  <strong>Aniversário:</strong>
+  <strong>Data de Nacimento:</strong>
   <%= @client.birthday %>
 </p>
 
@@ -63,11 +63,17 @@
   <strong>Fornecedor:</strong>
   <%= vaccine.provider %>
 </p>
-
 <p style="font-size: 1.5rem;" >
   <strong>Dia do Retorno:</strong>
-  <%= vaccine.return + vaccine.timereturn %>
+  <%= vaccine.dater %>
 </p>
+
+<!-- talvez usar dps
+<p style="font-size: 1.5rem;" >
+  <strong>Dia do Retorno:</strong>
+  <%#= vaccine.return + vaccine.timereturn %>
+</p>
+-->
 <br>
 <div class="divider blue"></div>
 <br>

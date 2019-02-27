@@ -17,7 +17,7 @@ class ClientsController < ApplicationController
   # GET /clients/new
   def new
     @client = Client.new
-    @client.vaccines.build
+    5.times {@client.vaccines.build}
   end
 
   # GET /clients/1/edit

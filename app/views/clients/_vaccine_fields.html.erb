@@ -1,41 +1,49 @@
 <div class="nested-fields">
-
-<div class="field">
+<div class="row">
+<div class="field col s4">
     <%= f.label :name,"Nome" , class:"flow-text" , style:"font-weight: bold;" %>
     <%= f.text_field :name, class:"flow-text" , style:"font-weight: bold;" %>
   </div>
 <!--
   <div class="field">
-    <%= f.label :desc, "Descrição", class:"flow-text" , style:"font-weight: bold;" %>
-    <%= f.text_field :desc, class:"flow-text" , style:"font-weight: bold;" %>
+    <%#= f.label :desc, "Descrição", class:"flow-text" , style:"font-weight: bold;" %>
+    <%#= f.text_field :desc, class:"flow-text" , style:"font-weight: bold;" %>
   </div>
 -->
-  <div class="field">
-    <%= f.label :lote, class:"flow-text" , style:"font-weight: bold;" %>
+  <div class="field col s2">
+    <%= f.label :lote, "Lote", class:"flow-text" , style:"font-weight: bold;" %>
     <%= f.text_field :lote, class:"flow-text" , style:"font-weight: bold;" %>
   </div>
 
-  <div class="field">
-    <%= f.label :expiration , "Data de Validade", class:"flow-text" , style:"font-weight: bold;" %>
+  <div class="field col s2">
+    <%= f.label :expiration , "Validade", class:"flow-text" , style:"font-weight: bold;" %>
     <%= f.date_field :expiration, class: "input-field datepicker" , style: "width:200px" %> 
   </div>
-
-  <div class="field">
-    <%= f.label :provider, "Fornecedor", class:"flow-text" , style:"font-weight: bold;" %>
-    <%= f.text_field :provider, class:"flow-text" , style:"font-weight: bold;" %>
+<!--
+  <div class="field col s2">
+    <%#= f.label :provider, "Fornecedor", class:"flow-text" , style:"font-weight: bold;" %>
+    <%#= f.text_field :provider, class:"flow-text" , style:"font-weight: bold;" %>
   </div>
-
-  <div class="field">
-    <%= f.label :return , 'Dia da vacina', class:"flow-text" , style:"font-weight: bold;" %>
+-->
+ <div class="field col s2">
+    <%= f.label :return , 'Aplicação', class:"flow-text" , style:"font-weight: bold;" %>
     <%= f.date_field :return, class: "input-field datepicker" , style: "width:200px" %> 
+  </div> 
+
+  <div class="field col s2">
+    <%= f.label :dater , 'Retorno', class:"flow-text" , style:"font-weight: bold;" %>
+    <%= f.date_field :dater, class: "input-field datepicker" , style: "width:200px" %> 
+  </div> 
+  <!--
+    <div class="field col s2">
+    <%#= f.label :timereturn, "retorno", class:"flow-text" , style:"font-weight: bold;" %>
+    <%#= f.number_field :timereturn, class:"flow-text" , style:"font-weight: bold;" %>
   </div> <br>
-  <div class="field" >
-    <%= f.label :timereturn, "Quantidade de dias para retorno", class:"flow-text" , style:"font-weight: bold;" %>
-    <%= f.number_field :timereturn, class:"flow-text" , style:"font-weight: bold;" %>
-  </div> <br>
+-->
 <div>
   
     <%= link_to_remove_association "Deletar", f , class: "waves-effect waves-light btn  red accent-4 "%> <br>
 </div>
 <br>
+</div>
 </div>
